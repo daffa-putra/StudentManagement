@@ -13,14 +13,7 @@ pipeline {
                 bat 'dir'  // Debug: list files
             }
         }
-        
-        stage('Build Docker Image') {
-            steps {
-                script {
-                    bat 'docker build -t blog-android:latest . --no-cache'
-                }
-            }
-        }
+
         
         stage('Run Tests') {
             steps {
